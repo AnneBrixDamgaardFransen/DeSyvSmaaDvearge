@@ -1,14 +1,14 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Main{
 
-
-    public int getRandomNumber(int min, int max) {
-        return (int) ((Math.random() * (max - min)) + min);
-    } 
     public static void main(String[] args) {
 
         Main m = new Main();
+        Random random = new Random();
+        int fupper = 3;
+        int supper = 2;
 
         ArrayList<String> list = new ArrayList<>();
         Brille b = new Brille("brille");
@@ -21,11 +21,11 @@ public class Main{
         list.add("Gnavpot");
 
         ArrayList<String> historielist = new ArrayList<>();
-        int førsteTal = m.getRandomNumber(0, 3);
+        int førsteTal = random.nextInt(fupper); //m.getRandomNumber(0, 3);
         historielist.add(list.get(førsteTal));
         list.remove(førsteTal);
 
-        int andetTal = m.getRandomNumber(0, 2);
+        int andetTal = random.nextInt(supper); //m.getRandomNumber(0, 2);
         historielist.add(list.get(andetTal));
         list.remove(andetTal);
 
